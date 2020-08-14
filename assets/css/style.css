@@ -88,7 +88,6 @@
 
 /* Common Styles */
 #top-bar {
-    background-color: #66676b;
     color: #fff;
     padding: 0;
     position: relative;
@@ -1921,17 +1920,6 @@ em.mm-counter + a.mm-fullsubopen + span {
     outline: none;
 }
 
-transform:
-
-rotate
-(
--
-90
-deg
-
-)
-;
-}
 
 /* Animation */
 .hamburger--collapse .hamburger-inner {
