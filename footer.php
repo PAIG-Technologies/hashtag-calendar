@@ -1,12 +1,12 @@
 <!-- Footer -->
 <div id="footer">
 	<!-- Main -->
-	<div class="footer-top py-8">
+	<div class="footer-top py-16">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-6">
 					<?php if (has_custom_logo()) : ?>
-					
+
 						<?php the_custom_logo(); ?>
 
 					<?php else: ?>
@@ -74,12 +74,12 @@
 		</div>
 	</div>
 
-	<div class="footer-bottom theme-bg">
+	<div class="footer-bottom bg-footer text-white py-3">
 		<div class="container">
 			<!-- Copyright -->
 			<div class="row">
 				<div class="col-md-4 col-xs-12 cs-text-center md:text-left">
-					<div class="cr1 mb-4 md:mb-0">Copyright © <a href="<?php echo getCustomThemeValue("copyright_url") ?>" target="#">
+					<div class="cr1 mb-4 md:mb-0">Copyright © <a href="<?php echo getCustomThemeValue("copyright_url") ?>" class="text-white" target="#">
 							<?php echo getCustomThemeValue("copyright_text", current_time('Y')." ".get_bloginfo("Name")); ?>
 						</a>
                     </div>
@@ -90,7 +90,7 @@
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'policy_menu',
-                            'menu_class' => 'list-inline text-center',
+                            'menu_class' => 'list-inline text-center mb-0',
                             'container' => 'ul',
                             'menu_id' => 'responsive',
                             'walker' => new Hashtag\Theme\WP_Bootstrap_Navwalker()
@@ -101,7 +101,7 @@
 				</div>
 				<div class="col-md-4 col-xs-12 cs-text-center md:text-right">
 					<div class="powered-by">Powered By
-						<a href="<?php echo getCustomThemeValue("poweredby_url","http://www.paigtechnologies.com.au/") ?>" target="#">
+						<a href="<?php echo getCustomThemeValue("poweredby_url","http://www.paigtechnologies.com.au/") ?>" class="text-white" target="#">
 							<?php
 							echo getCustomThemeValue("poweredby_text","PAIG Technologies");
 							?>

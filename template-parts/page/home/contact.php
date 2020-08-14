@@ -5,7 +5,8 @@ $phone_number = getCustomThemeValue('phone_number1', '1300007244');
 $email_address = getCustomThemeValue("email_address", "admin@paigtechnologies.com.au");
 $title = urlencode(get_bloginfo("name"));
 ?>
-<div class="container margin-top-55">
+<div class="section-contact bg-gray-100 pt-10">
+<div class="container margin-top-55 ">
     <div class="row">
         <!-- Contact Details -->
         <div class="col-md-4">
@@ -42,7 +43,7 @@ $title = urlencode(get_bloginfo("name"));
 
 
 <!-- Map Container -->
-<div class="contact-map margin-top-55 margin-neg-10">
+<div class="contact-map margin-top-55">
     <!-- Google Maps -->
     <div class="w-full">
         <iframe width="100%"
@@ -54,4 +55,6 @@ $title = urlencode(get_bloginfo("name"));
                 src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=<?php echo urldecode($map_address) ?>&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
     </div>
     <!-- Google Maps / End -->
+</div>
+
 </div>

@@ -85,7 +85,7 @@ if($enable_google_search == 'no'):
         <!-- Topbar -->
         <!-- Header -->
         <div id="header">
-            <div id="top-bar">
+            <div id="top-bar" class="bg-header">
                 <div class="container">
 
                         <div class="flex flex-wrap justify-between px3 items-center">
