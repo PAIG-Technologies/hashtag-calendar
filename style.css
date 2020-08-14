@@ -1,0 +1,39 @@
+/*
+Theme Name: Hashtag Calendar
+Template: hashtag-base-theme
+*/
+
+/*Utlity Classes*/
+.modal{
+    display:none;
+}
+
+.margin-neg-10{
+    margin-bottom: -10px;
+}
+
+#footer .footer-bottom a:hover{
+    color:#c8c8c8;
+}
+
+.contact-map iframe{
+    width:100% !important;
+}
+
+#navigation.style-1 ul li.portal-logo a{
+    padding-right: 0px !important;
+}
+
+@media (max-width: 767px) {
+    .cs-hidden{
+        display:none;
+    }
+
+    .cs-text-center {
+        text-align: center;
+    }
+
+    #navigation.style-1 ul li.portal-logo a{
+        padding-right: 10px !important;
+    }
+}
