@@ -1,1 +1,0 @@
-<?php echo do_shortcode("[paig_property_listings]"); ?>
