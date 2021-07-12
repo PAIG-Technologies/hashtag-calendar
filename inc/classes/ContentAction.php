@@ -5,7 +5,9 @@ class ContentAction{
     private $default;
     public function __construct()
     {
-        //$this->default=DefaultAction::getInstance();
+        $this->default=DefaultAction::getInstance();
+        remove_action('HashtagBannerAfterHeader', array($this->default, 'loadBannerAfterHeader'));
+        add_action("HashtagBannerAfterHeader",array($this,'loadBannerAfterHeader'),10);
 
         //sync hashtag contact form to hub backend
         $this->addSyncHashtagFormAction();
@@ -65,5 +67,15 @@ class ContentAction{
         $options["sslverify"]   = WP_ENVIRONMENT==='dev'?false:true;
 	    $request = wp_remote_post( HUB_API_URL .'api/addHashtagFormEnquiry',$options);
 	    return json_decode( wp_remote_retrieve_body( $request ) );
+    }
+
+    public function loadBannerAfterHeader($banner_image){
+        global $wp_query;
+        if($wp_query->is_property){
+            return;
+        }
+        $template_name="template-parts/page/general/page-title";
+        $data=[];
+        get_template_part($template_name,null,$data);
     }
 }
